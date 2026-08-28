@@ -1,0 +1,11 @@
+[build]
+command = "mkdir -p dist && cp -r *.html dist/ && cp -r *.css dist/ && cp -r *.js dist/ 2>/dev/null || true && cp -r images dist/ && cp -r assets dist/ 2>/dev/null || true"
+publish = "dist"
+
+[build.environment]
+NODE_VERSION = "20"
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
